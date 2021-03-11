@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.833);
+    font-family: Roboto, serif;
+}
+
+body {
+    background: linear-gradient(to right, rgb(37, 37, 37), rgb(65, 65, 65));
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(125px, auto) repeat(5, 100px);
+} 
+
+.calculator button {
+    cursor: pointer;
+    font-size: 2rem;
+    border:  1px solid gray;
+    border-top: none;
+    outline: none;
+    background-color: rgba(164, 164, 164, 0.278);
+}
+
+.calculator button:hover {
+    background-color: rgba(248, 248, 248, 0.527);;
+}
+
+.calculator button:active {
+    background-color: rgba(255, 255, 255, 0.798);
+}
+
+.span {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.403);
+    border:  1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.2rem 0.8rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.833);
+}
+
+.output .current {
+    font-size: 2.5rem;
+    color: white;
+}
